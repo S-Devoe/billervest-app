@@ -13,6 +13,7 @@ interface Props {
   textStyle?: string;
   styles?: string;
   onClick?: () => void;
+  type?: | "button" | 'submit'| "reset";
 }
 
 const Button: FC<Props> = ({
@@ -26,9 +27,11 @@ const Button: FC<Props> = ({
   borderRadius = "rounded-[6px]",
   styles,
   onClick,
+  type = "button",
 }) => {
   return (
     <button
+      type={type}
       className={`${width} ${height} ${bgColor} ${styles}
       ${paddingInline} ${paddingBlock} ${textStyle} ${borderRadius} `}
       onClick={onClick}

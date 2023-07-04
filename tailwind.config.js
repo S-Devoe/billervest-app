@@ -20,6 +20,10 @@ module.exports = {
       "yellow-main": "#FEA106",
       purple: "#7049F7",
     },
+    fontFamily: {
+      work: ['"Work Sans"', "sans-serif"],
+      source: ['"Source Sans Pro"', "sans-serif"],
+    },
   },
   plugins: [],
 };

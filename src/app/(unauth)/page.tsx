@@ -1,7 +1,8 @@
 import Image from "next/image";
 import HomePng from "@/assets/images/home-page.png";
 import Button from "@/components/form/Buttons/Button";
-import Collections from "@/components/commons/Collections";
+import Collections from "@/components/common/Collections";
+import DYNH from "@/components/common/DYNH";
 
 // images
 import Spar from "@/assets/images/companies/spar.png";
@@ -17,8 +18,6 @@ import Airtel from "@/assets/images/companies/airtel.png";
 import Glo from "@/assets/images/companies/glo.png";
 import Asos from "@/assets/images/companies/asos.png";
 import Ms from "@/assets/images/companies/ms.png";
-
-
 
 export default function Home() {
   return (
@@ -55,6 +54,12 @@ export default function Home() {
         <Collections title="Gaming" content={games} link="#" />
         <Collections title="Phone Top Up" content={phone} link="#" />
         <Collections title="Apparel" content={apparel} link="#" />
+        <div className=" flex justify-center mt-[90px] ">
+          <Button btnTitle="See More" width="w-full md:w-[200px]" />
+        </div>
+      </section>
+      <section className="my-[250px]  ">
+        <DYNH />
       </section>
     </main>
   );
@@ -78,7 +83,6 @@ const giftcards = [
     image: Jumia,
   },
 ];
-
 
 const food = [
   {

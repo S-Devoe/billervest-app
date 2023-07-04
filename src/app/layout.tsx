@@ -1,3 +1,4 @@
+import Footer from "@/components/skeleton/footer/Footer";
 import "./globals.scss";
 import { Inter } from "next/font/google";
 
@@ -16,8 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        
-        {children}</body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
