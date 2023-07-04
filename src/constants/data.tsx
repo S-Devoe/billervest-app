@@ -1,5 +1,20 @@
 import { FaqI, FooterListI } from "@/types";
 
+// images
+import Spar from "@/assets/images/companies/spar.png";
+import Nord from "@/assets/images/companies/nord.png";
+import Place from "@/assets/images/companies/place.png";
+import Jumia from "@/assets/images/companies/jumia.png";
+import Fortnite from "@/assets/images/companies/fortnite.png";
+import Fortnyt from "@/assets/images/companies/fortnyt.png";
+import Pubg from "@/assets/images/companies/pubg.png";
+import League from "@/assets/images/companies/league.png";
+import Mtn from "@/assets/images/companies/mtn.png";
+import Airtel from "@/assets/images/companies/airtel.png";
+import Glo from "@/assets/images/companies/glo.png";
+import Asos from "@/assets/images/companies/asos.png";
+import Ms from "@/assets/images/companies/ms.png";
+
 // socials
 import Facebook from "@/assets/images/socials/facebook.png";
 import LinkedIn from "@/assets/images/socials/linkedIn.png";
@@ -108,5 +123,102 @@ numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
 optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
 obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
 nihil`,
+  },
+];
+
+
+
+export const giftcards = [
+  {
+    id: 1,
+    image: Spar,
+  },
+  {
+    id: 2,
+    image: Nord,
+  },
+  {
+    id: 3,
+    image: Place,
+  },
+  {
+    id: 4,
+    image: Jumia,
+  },
+];
+
+export const food = [
+  {
+    id: 1,
+    image: Jumia,
+  },
+  {
+    id: 2,
+    image: Jumia,
+  },
+  {
+    id: 3,
+    image: Jumia,
+  },
+  {
+    id: 4,
+    image: Jumia,
+  },
+];
+
+export  const games = [
+  {
+    id: 1,
+    image: Fortnite,
+  },
+  {
+    id: 2,
+    image: Pubg,
+  },
+  {
+    id: 3,
+    image: Fortnyt,
+  },
+  {
+    id: 4,
+    image: League,
+  },
+];
+
+export const phone = [
+  {
+    id: 1,
+    image: Mtn,
+  },
+  {
+    id: 2,
+    image: Airtel,
+  },
+  {
+    id: 3,
+    image: Glo,
+  },
+  {
+    id: 4,
+    image: Mtn,
+  },
+];
+
+export const apparel = [
+  {
+    id: 1,
+    image: Ms,
+  },
+  {
+    id: 2,
+    image: Asos,
+  },
+  {
+    id: 3,
+    image: Asos,
+  },
+  {
+    id: 4,
+    image: Ms,
   },
 ];
