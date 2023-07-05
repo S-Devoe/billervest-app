@@ -12,10 +12,10 @@ const SignUp = () => {
     <main className="flex flex-col items-center pb-[300px] ">
       <section className="flex flex-col items-center gap-6 ">
         <h1 className="font-bold text-[40px] ">Create BillerPay account</h1>
-        <div className="flex flex-col gap-9">
+        <div className="flex flex-col gap-[40px] ">
           {sbLinks.map((item) => (
             <div
-              className="w-full md:w-[400px] rounded-[5px] bg-purple p-4 flex justify-center items-center gap-[70px] "
+              className="w-full md:w-[400px] cursor-pointer rounded-[5px] bg-purple p-4 flex justify-center items-center gap-[60px] "
               key={item.id}
             >
               <span className=" ">{item.icon}</span>

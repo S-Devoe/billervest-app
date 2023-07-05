@@ -7,10 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {},
+      fontFamily: {
+        grotesk: ["var(--font-space-grotesk)"],
+        poppins: ["var(--font-poppins)"],
+      },
     },
     colors: {
       main: "#230251",
+      yellow: "#FEA106",
       "primary-main": "#19013A",
       "primary-main2": "#048FF9",
       white: "#fff",
@@ -19,10 +23,7 @@ module.exports = {
       "blue-btn": "#048FF9",
       "yellow-main": "#FEA106",
       purple: "#7049F7",
-    },
-    fontFamily: {
-      work: ['"Work Sans"', "sans-serif"],
-      source: ['"Source Sans Pro"', "sans-serif"],
+      "grey-main": "#F5F2EA",
     },
   },
   plugins: [],

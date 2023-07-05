@@ -32,7 +32,7 @@ const Button: FC<Props> = ({
   return (
     <button
       type={type}
-      className={`${width} ${height} ${bgColor} ${styles}
+      className={`${width} ${height} ${bgColor} ${styles} 
       ${paddingInline} ${paddingBlock} ${textStyle} ${borderRadius} `}
       onClick={onClick}
     >

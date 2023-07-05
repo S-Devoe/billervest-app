@@ -1,8 +1,21 @@
 import Footer from "@/components/skeleton/footer/Footer";
 import "./globals.scss";
-import { Inter } from "next/font/google";
+import { Poppins, Space_Grotesk } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
+
+const space_grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
 
 export const metadata = {
   title: "BillerVest ",
@@ -16,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${space_grotesk.variable} ${poppins.variable} `}>
         {children}
         <Footer />
       </body>

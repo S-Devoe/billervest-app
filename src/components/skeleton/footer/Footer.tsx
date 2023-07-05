@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#1A1A1A] p-[50px]  ">
+    <footer className="w-full bg-[#1A1A1A] p-[50px]  ">
       <div className="flex gap-14 md:gap-4 flex-col md:flex-row justify-between items-center lg:items-start">
         <List title="Support" arr={supportList} />
         <List title="BillerVest Products Family" arr={billervest} />
