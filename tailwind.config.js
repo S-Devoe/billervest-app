@@ -6,14 +6,14 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        grotesk: ["var(--font-space-grotesk)"],
-        poppins: ["var(--font-poppins)"],
-      },
+    extend: {},
+    fontFamily: {
+      grotesk: ['"Space Grotesk"', "sans-serif"],
+      poppins: ['"Poppins"', "san-serif"],
     },
     colors: {
       main: "#230251",
+      "dark-main": "#020710",
       yellow: "#FEA106",
       "primary-main": "#19013A",
       "primary-main2": "#048FF9",
