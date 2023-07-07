@@ -102,6 +102,25 @@ li {
   list-style-type: none;
 }
 
+.carousel-btn {
+  height: 70px;
+  width: 70px;
+  border-radius: 999px;
+  border: 1px solid #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-collection button:disabled.carousel-btn {
+  background-color: #2a2727;
+  opacity: 0.8;
+  border: none;
+  cursor: not-allowed;
+  scale: .85;
+  transition: all 5000 ease-in-out ;
+}
+
 // @layer components {
 //   // .resp-margin {
 //   //   @apply mx-6 md:mx-32px lg:mx-75px;

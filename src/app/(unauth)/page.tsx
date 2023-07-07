@@ -5,9 +5,17 @@ import Button from "@/components/form/Buttons/Button";
 import Collections from "@/components/common/Collections";
 import DYNH from "@/components/common/DYNH";
 import { animated, useSpring } from "react-spring";
-import { apparel, food, games, giftcards, phone } from "@/constants/data";
+import {
+  ecommerce,
+  food,
+  games,
+  phone,
+  services,
+  travels,
+} from "@/constants/data";
 import Container from "@/components/skeleton/container/Container";
 import ChooseBillerPay from "@/components/common/ChooseBillerPay";
+import CollectionCarousel from "@/components/common/CollectionCarousel";
 
 function CountAnimation({ num }: { num: number }) {
   const { x } = useSpring({
@@ -58,19 +66,40 @@ export default function Home() {
         </section>
       </Container>
       <ChooseBillerPay />
-      <section className="mt-[180px] hidden md:flex flex-col gap-[70px] ">
-        <Collections title="Gift Cards" content={giftcards} link="#" />
-        <Collections title="Food" content={food} link="#" />
-        <Collections title="Gaming" content={games} link="#" />
-        <Collections title="Phone Top Up" content={phone} link="#" />
-        <Collections title="Apparel" content={apparel} link="#" />
-        <div className=" flex justify-center mt-[90px] ">
-          <Button btnTitle="See More" width="w-full md:w-[200px]" />
-        </div>
-      </section>
-      <section className="my-[250px]  ">
-        <DYNH />
-      </section>
+      <Container>
+        <section className="mt-[180px] carosel w-full flex flex-col gap-[100px] ">
+          <CollectionCarousel
+            link="#"
+            title="Top your mobile ASAP ⚡"
+            contentArr={phone}
+          />
+          <CollectionCarousel
+            link="#"
+            title="ECommerce 💸"
+            contentArr={ecommerce}
+          />
+          <CollectionCarousel
+            link="#"
+            title="Travels ✈️"
+            contentArr={travels}
+          />
+          <CollectionCarousel
+            link="#"
+            title="Gaming Cards 🎮"
+            contentArr={games}
+          />
+          <Collections content={services} title="Other Services 🎊" />
+          <div className=" flex justify-start mt-[20px] ">
+            <Button
+              btnTitle="Load More"
+              borderRadius="rounded-[50px]"
+              width="w-full md:w-[200px]"
+            />
+          </div>
+        </section>
+      </Container>
+
+      <DYNH />
     </main>
   );
 }

@@ -1,19 +1,21 @@
 import { FaqI, FooterListI } from "@/types";
 
 // images
-import Spar from "@/assets/images/companies/spar.png";
-import Nord from "@/assets/images/companies/nord.png";
-import Place from "@/assets/images/companies/place.png";
-import Jumia from "@/assets/images/companies/jumia.png";
-import Fortnite from "@/assets/images/companies/fortnite.png";
-import Fortnyt from "@/assets/images/companies/fortnyt.png";
-import Pubg from "@/assets/images/companies/pubg.png";
-import League from "@/assets/images/companies/league.png";
-import Mtn from "@/assets/images/companies/mtn.png";
-import Airtel from "@/assets/images/companies/airtel.png";
-import Glo from "@/assets/images/companies/glo.png";
-import Asos from "@/assets/images/companies/asos.png";
-import Ms from "@/assets/images/companies/ms.png";
+import Spar from "@/assets/images/collections/spar.png";
+import Nord from "@/assets/images/collections/nord.png";
+import Jumia from "@/assets/images/collections/jumia.png";
+import Pubg from "@/assets/images/collections/pubg.png";
+import Freefire from "@/assets/images/collections/freefire.png";
+import Mtn from "@/assets/images/collections/mtn.png";
+import Xbox from "@/assets/images/collections/xbox.png";
+import Nitendo from "@/assets/images/collections/nintendo.png";
+import Airtel from "@/assets/images/collections/airtel.png";
+import Etisalat from "@/assets/images/collections/9mobile.png";
+import Glo from "@/assets/images/collections/glo.png";
+import Arik from "@/assets/images/collections/arik.png";
+import AirPeace from "@/assets/images/collections/peace.png";
+import Aero from "@/assets/images/collections/aero.png";
+import Ibom from "@/assets/images/collections/ibom.png";
 
 // socials
 import Facebook from "@/assets/images/socials/facebook.png";
@@ -27,6 +29,16 @@ import Contact from "@/assets/images/support/contact.png";
 import TOS from "@/assets/images/support/tos.png";
 import Privacy from "@/assets/images/support/policy.png";
 import BillerPay from "@/assets/images/support/BillerPay.png";
+
+// services 
+import Uber from '@/assets/images/collections/uber.png'
+import Hulu from '@/assets/images/collections/hulu.png'
+import Twitch from '@/assets/images/collections/twitch.png'
+import Dstv from '@/assets/images/collections/dstv.png'
+import Gotv from '@/assets/images/collections/gotv.png'
+import Skype from '@/assets/images/collections/skype.png'
+import Ie from '@/assets/images/collections/ie.png'
+import Spectranet from '@/assets/images/collections/spectranet.png'
 
 export const supportList: FooterListI[] = [
   {
@@ -126,24 +138,38 @@ nihil`,
   },
 ];
 
-
-
-export const giftcards = [
+export const travels = [
   {
     id: 1,
-    image: Spar,
+    image: Arik,
   },
   {
     id: 2,
-    image: Nord,
+    image: AirPeace,
   },
   {
     id: 3,
-    image: Place,
+    image: Ibom,
   },
   {
     id: 4,
-    image: Jumia,
+    image: Aero,
+  },
+  {
+    id: 5,
+    image: Arik,
+  },
+  {
+    id: 6,
+    image: AirPeace,
+  },
+  {
+    id: 7,
+    image: Ibom,
+  },
+  {
+    id: 8,
+    image: Aero,
   },
 ];
 
@@ -166,22 +192,38 @@ export const food = [
   },
 ];
 
-export  const games = [
+export const games = [
   {
     id: 1,
-    image: Fortnite,
-  },
-  {
-    id: 2,
     image: Pubg,
   },
   {
+    id: 2,
+    image: Freefire,
+  },
+  {
     id: 3,
-    image: Fortnyt,
+    image: Xbox,
   },
   {
     id: 4,
-    image: League,
+    image: Nitendo,
+  },
+  {
+    id: 5,
+    image: Pubg,
+  },
+  {
+    id: 6,
+    image: Freefire,
+  },
+  {
+    id: 7,
+    image: Xbox,
+  },
+  {
+    id: 8,
+    image: Nitendo,
   },
 ];
 
@@ -200,25 +242,124 @@ export const phone = [
   },
   {
     id: 4,
+    image: Etisalat,
+  },
+  {
+    id: 5,
     image: Mtn,
+  },
+  {
+    id: 6,
+    image: Airtel,
+  },
+  {
+    id: 7,
+    image: Etisalat,
+  },
+  {
+    id: 8,
+    image: Mtn,
+  },
+  {
+    id: 9,
+    image: Airtel,
   },
 ];
 
-export const apparel = [
+export const ecommerce = [
   {
     id: 1,
-    image: Ms,
+    image: Jumia,
   },
   {
     id: 2,
-    image: Asos,
+    image: Spar,
   },
   {
     id: 3,
-    image: Asos,
+    image: Nord,
   },
   {
     id: 4,
-    image: Ms,
+    image: Spar,
+  },
+  {
+    id: 5,
+    image: Jumia,
+  },
+  {
+    id: 6,
+    image: Nord,
+  },
+  {
+    id: 7,
+    image: Spar,
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    image: Uber,
+  },
+  {
+    id: 2,
+    image: Hulu,
+  },
+  {
+    id: 3,
+    image: Twitch,
+  },
+  {
+    id: 4,
+    image: Dstv,
+  },
+  {
+    id: 5,
+    image: Gotv,
+  },
+  {
+    id: 6,
+    image: Skype,
+  },
+  {
+    id: 7,
+    image: Hulu,
+  },
+  {
+    id: 8,
+    image: Uber,
+  },
+  {
+    id: 9,
+    image: Ie,
+  },
+  {
+    id: 10,
+    image: Uber,
+  },
+  {
+    id: 11,
+    image: Hulu,
+  },
+  {
+    id: 12,
+    image: Gotv,
+  },
+  {
+    id: 13,
+    image: Skype,
+  },
+  {
+    id: 14,
+    image: Hulu,
+  },
+  {
+    id: 15,
+    image: Ie,
+  },
+  {
+    id: 16,
+    image: Dstv,
   },
 ];

@@ -1,6 +1,8 @@
 import Footer from "@/components/skeleton/footer/Footer";
 import "./globals.scss";
 import { Poppins, Space_Grotesk } from "next/font/google";
+import "swiper/css";
+import "swiper/css/pagination";
 
 // const inter = Inter({ subsets: ["latin"] });
 

@@ -10,11 +10,11 @@ const ChooseBillerPay = () => {
     <section className="linear-bg w-screen mt-[100px] grid justify-items-center ">
       <Container>
         <div className="">
-          <h2 className="font-grotesk font-semibold text-[50px]  ">
+          <h2 className="font-grotesk font-semibold text-[50px] text-center  ">
             Why Choose Billerpay?
           </h2>
           <div className="grid justify-items-center mt-3 ">
-            <p className=" text-[23px] text-grey-main  ">
+            <p className=" text-[23px] text-[#ffffff98]  ">
               See why you should start using Billerpay
             </p>
 
@@ -22,9 +22,13 @@ const ChooseBillerPay = () => {
               {listArr.map((item) => (
                 <div className="flex flex-col items-center " key={item.id}>
                   <div className="border-[1px] border-yellow grid place-content-center p-[19px] h-[120px] w-[120px] rounded-full  ">
-                    <div className="bg-white rounded-full h-[90px] grid place-content-center w-[90px] ">{item.icon}</div>
+                    <div className="bg-white rounded-full h-[90px] grid place-content-center w-[90px] ">
+                      {item.icon}
+                    </div>
                   </div>
-                  <h3 className="mt-4 font-grotesk font-[600] text-[25px] " >{item.value}</h3>
+                  <h3 className="mt-4 font-grotesk font-[600] text-[25px] ">
+                    {item.value}
+                  </h3>
                 </div>
               ))}
             </div>

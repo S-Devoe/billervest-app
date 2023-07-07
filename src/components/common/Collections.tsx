@@ -7,26 +7,27 @@ import { FC } from "react";
 interface Props {
   title: string;
   content: Array<{ id: number; image: StaticImageData }>;
-  link: string;
+  // link: string;
 }
 
-const Collections: FC<Props> = ({
-  title = "test1",
-  content,
-  link = "test4",
-}) => {
+const Collections: FC<Props> = ({ title, content }) => {
   return (
     <section>
       <div className="flex justify-between items-end ">
-        <h2 className="font-bold text-[40px]  ">{title}</h2>
-        <Link className="ont-bold text-[20px]  " href={link}>
-          See all
-        </Link>
+        <h2 className="font-bold text-[40px] font-grotesk   ">{title}</h2>
       </div>
-      <div className="mt-[60px] flex items-center justify-between gap-[60px] ">
+      <div className="mt-[60px] grid grid-cols-1 md:grid-cols-4 gap-[70px] ">
         {content.map((item, index) => (
-          <div className="relative h-[250px] w-[260px]  bg-white  " key={index}>
-            <Image src={item.image} alt="img" fill  />
+          <div
+            className={`rounded-[0.721rem] relative flex items-center justify-center bg-white h-[140px]  w-[270px]  `}
+            key={item.id}
+          >
+            <Image
+              src={item.image}
+              alt="img"
+              className=" rounded-[0.721rem] aspect-[3/2] object-contain  "
+              sizes="100%"
+            />
           </div>
         ))}
       </div>
