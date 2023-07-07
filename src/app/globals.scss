@@ -31,9 +31,24 @@ nav {
   max-width: 1400px;
 }
 main {
+  display: grid;
+  justify-items: center;
+}
+
+.linear-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(254, 161, 6, 0.05) 5%,
+    rgba(42, 43, 49, 0.4) 50%,
+
+    rgba(254, 161, 6, 0.05) 100%
+  );
+}
+
+.max-width {
+  max-width: 1400px;
   padding-inline: 24px;
   padding-block: 24px;
-  max-width: 1400px;
 }
 
 .mobile-fixed {
@@ -58,7 +73,6 @@ main {
   z-index: 999;
   background-color: #19013a;
 }
-
 
 * {
   font-family: "Poppins", sans-serif;

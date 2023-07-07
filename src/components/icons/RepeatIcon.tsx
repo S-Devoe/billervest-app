@@ -1,0 +1,59 @@
+"use client";
+
+import { SvgProps } from "@/types";
+import { FC } from "react";
+
+const Repeaticon: FC<SvgProps> = (props) => {
+  return (
+    <svg
+      width="53"
+      height="53"
+      viewBox="0 0 53 53"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M15.0625 17.1976H33.8708C36.1329 17.1976 37.9375 19.0275 37.9375 21.2642V25.763"
+        stroke={props.strokeColor || "#292D32" }
+        strokeWidth="2.07955"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M19.3579 12.9274L15.0625 17.1976L19.3579 21.493"
+        stroke={props.strokeColor || "#292D32" }
+        strokeWidth="2.07955"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M37.9375 35.8024H19.1292C16.8671 35.8024 15.0625 33.9725 15.0625 31.7358V27.237"
+        stroke={props.strokeColor || "#292D32" }
+        strokeWidth="2.07955"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M33.6421 40.0726L37.9375 35.8024L33.6421 31.507"
+        stroke={props.strokeColor || "#292D32" }
+        strokeWidth="2.07955"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M26.5 51.9167C40.5373 51.9167 51.9167 40.5373 51.9167 26.5C51.9167 12.4628 40.5373 1.08337 26.5 1.08337C12.4628 1.08337 1.08334 12.4628 1.08334 26.5C1.08334 40.5373 12.4628 51.9167 26.5 51.9167Z"
+        stroke={props.strokeColor || "#292D32" }
+        strokeWidth="2.07955"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export default Repeaticon;
