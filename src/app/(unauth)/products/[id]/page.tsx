@@ -6,7 +6,7 @@ import Exchange from "@/components/common/Exchange";
 import FAQ from "@/components/common/FAQ";
 import TopUpWorks from "@/components/common/TopUpWorks";
 import Button from "@/components/form/Buttons/Button";
-import { apparel, faqData, games, phone } from "@/constants/data";
+import {  faqData, games, phone } from "@/constants/data";
 import Image from "next/image";
 
 const Product = () => {
@@ -34,9 +34,9 @@ const Product = () => {
         </div>
       </section>
       <section className="mt-[180px] flex flex-col gap-[70px] ">
-        <Collections title="Gaming" content={games} link="#" />
+        {/* <Collections title="Gaming" content={games} link="#" />
         <Collections title="Phone Top Up" content={phone} link="#" />
-        <Collections title="Apparel" content={apparel} link="#" />
+        <Collections title="Apparel" content={apparel} link="#" /> */}
         <div className=" flex justify-center mt-[90px] ">
           <Button btnTitle="See More" width="w-full md:w-[200px]" />
         </div>

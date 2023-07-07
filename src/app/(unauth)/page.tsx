@@ -5,14 +5,7 @@ import Button from "@/components/form/Buttons/Button";
 import Collections from "@/components/common/Collections";
 import DYNH from "@/components/common/DYNH";
 import { animated, useSpring } from "react-spring";
-import {
-  ecommerce,
-  food,
-  games,
-  phone,
-  services,
-  travels,
-} from "@/constants/data";
+import { ecommerce, games, phone, services, travels } from "@/constants/data";
 import Container from "@/components/skeleton/container/Container";
 import ChooseBillerPay from "@/components/common/ChooseBillerPay";
 import CollectionCarousel from "@/components/common/CollectionCarousel";
