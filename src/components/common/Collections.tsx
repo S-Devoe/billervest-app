@@ -12,20 +12,20 @@ interface Props {
 
 const Collections: FC<Props> = ({ title, content }) => {
   return (
-    <section>
+    <section className="" >
       <div className="flex justify-between items-end ">
-        <h2 className="font-bold text-[40px] font-grotesk   ">{title}</h2>
+        <h2 className="font-bold text-[25px] md:text-[40px] font-grotesk   ">{title}</h2>
       </div>
-      <div className="mt-[60px] grid grid-cols-1 md:grid-cols-4 gap-[70px] ">
-        {content.map((item, index) => (
+      <div className="mt-[30px] md:mt-[60px] grid grid-cols-2 md:grid-cols-4 gap-[25px] md:gap-[70px] ">
+        {content.map((item) => (
           <div
-            className={`rounded-[0.721rem] relative flex items-center justify-center bg-white h-[140px]  w-[270px]  `}
+            className={`rounded-[0.721rem] relative flex items-center justify-center bg-white h-full w-full md:h-[140px]  md:w-[270px]  `}
             key={item.id}
           >
             <Image
               src={item.image}
               alt="img"
-              className=" rounded-[0.721rem] aspect-[3/2] object-contain  "
+              className="rounded-[8px] md:rounded-[0.721rem] w-[80%] h-[80%] aspect-[3/2] object-contain  "
               sizes="100%"
             />
           </div>

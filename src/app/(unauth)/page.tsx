@@ -54,13 +54,13 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-1 md:mt-0 mt-10 flex justify-end md:h-full md:w-full ">
-            <Image src={HomePng} alt="img" />
+            <Image src={HomePng} alt="img" priority />
           </div>
         </section>
       </Container>
       <ChooseBillerPay />
       <Container>
-        <section className="mt-[180px] carosel w-full flex flex-col gap-[100px] ">
+        <section className="mt-8 md:mt-[180px] carosel w-full flex flex-col gap-[40px] lg:gap-[80px] ">
           <CollectionCarousel
             link="#"
             title="Top your mobile ASAP ⚡"
@@ -82,10 +82,10 @@ export default function Home() {
             contentArr={games}
           />
           <Collections content={services} title="Other Services 🎊" />
-          <div className=" flex justify-start mt-[20px] ">
+          <div className=" flex justify-start  md:mt-[20px] ">
             <Button
               btnTitle="Load More"
-              borderRadius="rounded-[50px]"
+              borderRadius="rounded-[8px] md:rounded-[50px]"
               width="w-full md:w-[200px]"
             />
           </div>

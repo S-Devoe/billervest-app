@@ -54,26 +54,24 @@ const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
     },
     "768": {
       slidesPerView: 2,
-      spaceBetween: 16,
+      spaceBetween: 0,
     },
     "680": {
       slidesPerView: 2,
-      spaceBetween: 12,
+      spaceBetween: 0,
     },
-    "0": {
-      slidesPerView: 1,
-    },
+    
   };
 
   return (
     <div className="carousel-collection">
       <div className="flex justify-between items-center ">
-        <h4 className=" font-semibold text-[40px] font-grotesk  ">{title}</h4>
+        <h4 className=" font-semibold text-[26px] md:text-[40px] font-grotesk  ">{title}</h4>
         <div className="flex items-center gap-5 ">
-          <Link href={link} className="text-[23px]  ">
+          <Link href={link} className="text-[18px] md:text-[23px]  ">
             See more
           </Link>
-          <div className="flex items-center gap-5">
+          <div className=" hidden md:flex items-center gap-5">
             <button
               className="carousel-btn"
               onClick={handlePrev}
@@ -91,7 +89,7 @@ const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
           </div>
         </div>
       </div>
-      <div className="w-full mt-[60px] ">
+      <div className="mt-[25px] lg:mt-[60px] ">
         <Swiper
           onSlideChange={handleSlideChange}
           modules={[Navigation, Autoplay]}
@@ -106,12 +104,14 @@ const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
         >
           {contentArr.map((item) => (
             <SwiperSlide className="" key={`collection-${item.id}`}>
-              <div className="rounded-[0.721rem] relative flex items-center justify-center bg-white h-[140px]  w-[240px]  ">
+              <div className="rounded-[0.721rem] relative flex items-center justify-center bg-white h-[100px] w-[150px] md:h-[140px]  md:w-[240px]  ">
                 <Image
                   src={item.image}
                   alt="img"
-                  className=" rounded-[0.721rem] aspect-[3/2] object-contain  "
+                  className=" rounded-[0.721rem] w-[90%] h-[85%] aspect-[3/2] object-contain  "
                   sizes="100%"
+                  
+
                 />
               </div>
             </SwiperSlide>

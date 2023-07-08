@@ -77,7 +77,7 @@ const UnAuthNavbar = () => {
       <nav className="mobile-fixed border-b-[0.1px] bg-dark-main border-b-grey-main flex w-full py-5 px-4 items-center justify-between md:hidden">
         <div className="flex items-center justify-between gap-[40px] w-full ">
           <Link href="/" className="relative h-[49px] w-[198px] ">
-            <Image src={Logo} alt="logo" fill />
+            <Image src={Logo} alt="logo" fill sizes='100%' />
           </Link>
 
           <div className="">

@@ -33,7 +33,7 @@ const ReceiptIcon: FC<SvgProps> = (props) => {
         d="M16.5 23.8517H22"
         stroke={props.strokeColor || "#292D32" }
         strokeWidth={props.strokeWidth || "2.75"}
-        stroke-linecap="round"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
