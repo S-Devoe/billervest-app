@@ -10,11 +10,17 @@ import { Swiper as SwiperCore } from "swiper/types";
 
 interface Props {
   title: string;
-  contentArr: Array<{ id: number; image: StaticImageData }>;
+  contentArr: Array<{ id: number; image: StaticImageData; header?: string }>;
   link: string;
+  linkType?: string;
 }
 
-const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
+const CollectionCarousel: FC<Props> = ({
+  title,
+  contentArr,
+  link,
+  linkType,
+}) => {
   const swiperRef = useRef<SwiperCore>();
   const nextRef = useRef<any>(null);
 
@@ -43,7 +49,7 @@ const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
   }, []);
 
   const autoplay = {
-    delay: 5000,
+    delay: 9000,
     disableOnInteraction: true,
   };
 
@@ -65,17 +71,19 @@ const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
       slidesPerView: 3,
       spaceBetween: 5,
     },
-    
+
     "0": {
       slidesPerView: 2,
       spaceBetween: 2,
-    }
+    },
   };
 
   return (
     <div className="carousel-collection">
       <div className="flex justify-between items-center ">
-        <h4 className=" font-semibold text-[26px] lg:text-[40px] font-grotesk  ">{title}</h4>
+        <h4 className=" font-semibold text-[26px] lg:text-[40px] font-grotesk  ">
+          {title}
+        </h4>
         <div className="flex items-center gap-5 ">
           <Link href={link} className="text-[18px] lg:text-[23px]  ">
             See more
@@ -114,16 +122,17 @@ const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
         >
           {contentArr.map((item) => (
             <SwiperSlide className="" key={`collection-${item.id}`}>
-              <div className="rounded-[0.721rem] relative flex items-center justify-center bg-white h-[100px] w-[150px] md:w-[200px] lg:h-[140px]  lg:w-[240px]  ">
+              <Link
+                href={linkType ? `/${linkType}/${item.id}` : ""}
+                className="rounded-[0.721rem] relative flex items-center justify-center bg-white h-[100px] w-[150px] md:w-[200px] lg:h-[140px]  lg:w-[240px]  "
+              >
                 <Image
                   src={item.image}
                   alt="img"
                   className=" rounded-[0.721rem] w-[90%] h-[85%] aspect-[3/2] object-contain  "
                   sizes="100%"
-                  
-
                 />
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

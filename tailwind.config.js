@@ -24,6 +24,7 @@ module.exports = {
       "yellow-main": "#FEA106",
       purple: "#7049F7",
       "grey-main": "#F5F2EA",
+      "grey-text": "#808080",
     },
   },
   plugins: [],

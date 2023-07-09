@@ -65,6 +65,7 @@ export default function Home() {
             link="#"
             title="Top your mobile ASAP ⚡"
             contentArr={phone}
+            linkType="products/top-up"
           />
           <CollectionCarousel
             link="#"

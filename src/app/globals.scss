@@ -128,9 +128,6 @@ li {
 }
 
 .swiper {
- 
-  
-
   .swiper-wrapper {
     display: flex !important;
     gap: 20px;
@@ -149,12 +146,12 @@ li {
   }
 }
 
-// @layer components {
-//   // .resp-margin {
-//   //   @apply mx-6 md:mx-32px lg:mx-75px;
-//   // }
+@layer components {
+  .input-style {
+    @apply w-full md:w-[450px] lg:w-[500px];
+  }
 
-//   // .resp-padding {
-//   //   @apply px-6 md:px-32px lg:px-75px py-[64px];
-//   // }
-// }
+  // .resp-padding {
+  //   @apply px-6 md:px-32px lg:px-75px py-[64px];
+  // }
+}

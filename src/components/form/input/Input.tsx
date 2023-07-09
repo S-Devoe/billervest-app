@@ -1,6 +1,8 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useState } from "react";
+import { AiOutlineEyeInvisible } from "react-icons/ai";
+import { AiOutlineEye } from "react-icons/ai";
 
 interface Props {
   name: string;
@@ -18,19 +20,42 @@ const Input: FC<Props> = ({
   style = "flex flex-col gap-[16px] ",
   inputStyle,
   type = "text",
-  labelStyle = "font-semibold text-[20px]",
+  labelStyle = "font-semibold font-grotesk text-[20px]",
   placeholder,
 }) => {
+  const [showPwd, setShowPwd] = useState<boolean>(false);
+
   return (
     <div className={style}>
       <label htmlFor={name} className={labelStyle}>
         {label}
       </label>
-      <input
-        type={type}
-        placeholder={placeholder}
-        className={` ${inputStyle} border-[1.5px] rounded-[6px] p-2 h-[60px] border-[#7049F7]  `}
-      />
+      <>
+        {type !== "password" ? (
+          <input
+            type={type}
+            placeholder={placeholder}
+            className={` ${inputStyle} border-[1.75px] rounded-[6px] p-2 h-[60px] border-white  `}
+          />
+        ) : (
+          <div
+            className={`${inputStyle} flex items-center gap-3 focus-within:border-[1.8px] border-[1.75px] rounded-[6px] p-2 h-[60px] border-white`}
+          >
+            <input
+              type={showPwd ? "text" : "password"}
+              placeholder={placeholder}
+              className={` w-full h-full border-none outline-none  `}
+            />
+            <div
+              role="button"
+              onClick={() => setShowPwd((prev) => !prev)}
+              className=" "
+            >
+              {showPwd ? <AiOutlineEyeInvisible size={25} /> : <AiOutlineEye size={25} />}
+            </div>
+          </div>
+        )}
+      </>
     </div>
   );
 };
