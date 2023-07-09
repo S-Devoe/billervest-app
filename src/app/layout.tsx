@@ -7,18 +7,18 @@ import Head from "next/head";
 
 // const inter = Inter({ subsets: ["latin"] });
 
-// const poppins = Poppins({
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-//   subsets: ["latin"],
-//   display: "swap",
-//   variable: "--font-poppins",
-// });
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
 
-// const space_grotesk = Space_Grotesk({
-//   subsets: ["latin"],
-//   display: "swap",
-//   variable: "--font-space-grotesk",
-// });
+const space_grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
 
 export const metadata = {
   title: "BillerVest ",
@@ -39,7 +39,7 @@ export default function RootLayout({
         />
       </Head>
 
-      <body className={` `}>
+      <body className={`${space_grotesk.variable} ${poppins.variable} `}>
         {children}
         <Footer />
       </body>
