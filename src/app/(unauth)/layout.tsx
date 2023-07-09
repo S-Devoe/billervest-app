@@ -1,3 +1,4 @@
+import DYNH from "@/components/common/DYNH";
 import UnAuthNavbar from "@/components/navbars/UnAuthNavbar";
 
 export default function UnAuthenticatedLayout({
@@ -9,6 +10,7 @@ export default function UnAuthenticatedLayout({
     <>
       <UnAuthNavbar />
       {children}
+      <DYNH />
     </>
   );
 }

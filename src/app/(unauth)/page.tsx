@@ -92,7 +92,7 @@ export default function Home() {
         </section>
       </Container>
 
-      <DYNH />
+      
     </main>
   );
 }

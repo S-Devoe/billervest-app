@@ -48,30 +48,39 @@ const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
   };
 
   const breakpoints = {
-    "1024": {
+    "1200": {
       slidesPerView: 5,
       spaceBetween: 3,
     },
-    "768": {
-      slidesPerView: 2,
-      spaceBetween: 0,
+
+    "1000": {
+      slidesPerView: 4,
+      spaceBetween: 2,
     },
-    "680": {
-      slidesPerView: 2,
-      spaceBetween: 0,
+    "600": {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+    "460": {
+      slidesPerView: 3,
+      spaceBetween: 5,
     },
     
+    "0": {
+      slidesPerView: 2,
+      spaceBetween: 2,
+    }
   };
 
   return (
     <div className="carousel-collection">
       <div className="flex justify-between items-center ">
-        <h4 className=" font-semibold text-[26px] md:text-[40px] font-grotesk  ">{title}</h4>
+        <h4 className=" font-semibold text-[26px] lg:text-[40px] font-grotesk  ">{title}</h4>
         <div className="flex items-center gap-5 ">
-          <Link href={link} className="text-[18px] md:text-[23px]  ">
+          <Link href={link} className="text-[18px] lg:text-[23px]  ">
             See more
           </Link>
-          <div className=" hidden md:flex items-center gap-5">
+          <div className=" hidden lg:flex items-center gap-5">
             <button
               className="carousel-btn"
               onClick={handlePrev}
@@ -94,6 +103,7 @@ const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
           onSlideChange={handleSlideChange}
           modules={[Navigation, Autoplay]}
           // autoplay={autoplay}
+          cssMode={true}
           breakpoints={breakpoints}
           navigation={{
             nextEl: nextRef.current,
@@ -104,7 +114,7 @@ const CollectionCarousel: FC<Props> = ({ title, contentArr, link }) => {
         >
           {contentArr.map((item) => (
             <SwiperSlide className="" key={`collection-${item.id}`}>
-              <div className="rounded-[0.721rem] relative flex items-center justify-center bg-white h-[100px] w-[150px] md:h-[140px]  md:w-[240px]  ">
+              <div className="rounded-[0.721rem] relative flex items-center justify-center bg-white h-[100px] w-[150px] md:w-[200px] lg:h-[140px]  lg:w-[240px]  ">
                 <Image
                   src={item.image}
                   alt="img"

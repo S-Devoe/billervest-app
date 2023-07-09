@@ -104,8 +104,8 @@ li {
   list-style-type: none;
 }
 
-.font-grotesk{
-  font-family: 'Space Grotesk', sans-serif;
+.font-grotesk {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .carousel-btn {
@@ -128,18 +128,23 @@ li {
 }
 
 .swiper {
-  // display: none !important;
+ 
+  
 
   .swiper-wrapper {
     display: flex !important;
     gap: 20px;
+    align-items: stretch;
+    width: auto;
 
     @media screen and (min-width: 768px) {
       gap: 30px;
     }
 
     .swiper-slide {
-      flex-shrink: unset !important;
+      flex-shrink: 0 !important;
+      height: unset;
+      // width: 100% !important;
     }
   }
 }

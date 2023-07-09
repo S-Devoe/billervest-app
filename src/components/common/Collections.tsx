@@ -16,10 +16,10 @@ const Collections: FC<Props> = ({ title, content }) => {
       <div className="flex justify-between items-end ">
         <h2 className="font-bold text-[25px] md:text-[40px] font-grotesk   ">{title}</h2>
       </div>
-      <div className="mt-[30px] md:mt-[60px] grid grid-cols-2 md:grid-cols-4 gap-[25px] md:gap-[70px] ">
+      <div className="mt-[30px] md:mt-[60px] grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-[25px] lg:gap-[70px] ">
         {content.map((item) => (
           <div
-            className={`rounded-[0.721rem] relative flex items-center justify-center bg-white h-full w-full md:h-[140px]  md:w-[270px]  `}
+            className={`rounded-[0.721rem] relative flex items-center justify-center bg-white h-full w-full md:h-[140px]   `}
             key={item.id}
           >
             <Image
