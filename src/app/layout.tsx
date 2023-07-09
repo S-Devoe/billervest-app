@@ -31,7 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${space_grotesk.variable} ${poppins.variable} `}
+    >
       <Head>
         <meta
           name="viewport"
@@ -39,7 +42,7 @@ export default function RootLayout({
         />
       </Head>
 
-      <body className={`${space_grotesk.variable} ${poppins.variable} `}>
+      <body>
         {children}
         <Footer />
       </body>
