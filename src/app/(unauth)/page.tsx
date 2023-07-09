@@ -26,7 +26,7 @@ export default function Home() {
       <Container>
         <section className="flex flex-col md:flex-row items-center justify-between mt-[20px] ">
           <div className=" flex flex-col gap-4 md:gap-0 items-center md:items-start flex-1 ">
-            <p className="text-[16px] tracking-[13%] leading-[25.6px] text-yellow font-[700] ">
+            <p className="text-[16px] tracking-[13%] text-center md:text-start leading-[25.6px] text-yellow font-[700] ">
               EMBRACE CRYPTO, FACILITATE PAYMENTS
             </p>
             <h1 className="font-semibold text-center md:text-start text-[50px] md:text-[78px] !font-grotesk leading-[60px] md:leading-[81px]  ">

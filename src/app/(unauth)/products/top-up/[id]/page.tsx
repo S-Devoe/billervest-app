@@ -28,7 +28,7 @@ const Product = () => {
           className=" h-[150px] max-w-[250px] md:h-[175px] md:max-w-[300px] mt-[20px] md:mt-[50px] "
         />
         <form className="flex flex-col items-center mt-[50px] w-full ">
-          <div className="flex flex-col gap-8 w-full">
+          <div className="flex flex-col items-center gap-8 w-full">
             <Input
               inputStyle="input-style "
               label="Enter Phone number"
