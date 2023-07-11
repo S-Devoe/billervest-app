@@ -5,20 +5,23 @@ import Collections from "@/components/common/Collections";
 import TransactModal from "@/components/common/TransactModal";
 import TransactWallet from "@/components/common/TransactModal";
 import Button from "@/components/form/Buttons/Button";
+import CustomDatePicker from "@/components/form/DatePicker/CustomDatePicker";
 import Input from "@/components/form/input/Input";
 import SelectDropdown from "@/components/form/select/Select";
 import Container from "@/components/skeleton/container/Container";
 import { games, phone, services, travels } from "@/constants/data";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useId } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { GoCheckCircle } from "react-icons/go";
 import { MdOutlineCancel } from "react-icons/md";
 
-const Product = () => {
+const Travels = () => {
+  console.log(useId());
+
   const { id } = useParams();
-  const data = phone.filter((product) => product.id === Number(id))[0];
+  const data = travels.filter((product) => product.id === Number(id))[0];
   // states
   const [openSuccessModal, setOpenSuccessModal] = useState<boolean>(false);
   const [openCancelModal, setOpenCancelModal] = useState<boolean>(false);
@@ -30,24 +33,72 @@ const Product = () => {
     setOpenSuccessModal((prev) => !prev);
   };
 
+  //   dummy airports data
+  const airports = [
+    {
+      id: useId(),
+      value: "Nnamdi Azikiwe International Airport ",
+      label: "Nnamdi Azikiwe International Airport ",
+    },
+    {
+      id: useId(),
+      value: "Akanu Ibiam International Airport ",
+      label: "Akanu Ibiam International Airport ",
+    },
+    {
+      id: useId(),
+      value: "Kaduna International Airport ",
+      label: "Kaduna International Airport ",
+    },
+    {
+      id: useId(),
+      value: "Mallam Aminu Kano International Airport",
+      label: "Mallam Aminu Kano International Airport",
+    },
+    {
+      id: useId(),
+      value: "Murtala Muhammed International Airport",
+      label: "Murtala Muhammed International Airport",
+    },
+    {
+      id: useId(),
+      value: "Port Harcourt International Airport",
+      label: "Port Harcourt International Airport",
+    },
+  ];
+
   return (
     <main>
       <section className="mt-[35px] md:mt-[50px] flex flex-col items-center  ">
         <h1 className="text-center font-semibold text-[40px] font-grotesk lg:text-[70px] ">
-          {data.header}
+          Where will you like to go?
         </h1>
-        <Image
-          src={data.image}
-          alt="img"
-          className=" h-[150px] max-w-[250px] md:h-[165px] md:max-w-[300px] mt-[20px] md:mt-[50px] "
-        />
+        <div className="mt-[20px] md:mt-[50px] h-fit p-6 max-w-[300px] flex items-center aspect-video justify-center bg-white rounded-[16px] md:rounded-[24px]  md:max-w-[500px]  ">
+          <Image
+            src={data.image}
+            alt="img"
+            className=" h-[150px] max-w-[250px] md:h-[165px] md:max-w-[300px]  "
+          />
+        </div>
         <FormProvider {...methods}>
           <form
             className="flex flex-col items-center mt-[50px] w-full "
             onSubmit={methods.handleSubmit(onSubmit)}
           >
             <div className="flex flex-col items-center gap-8 w-full">
-             
+              <SelectDropdown
+                label="From"
+                name="from"
+                options={airports}
+                className="input-style"
+              />
+              <SelectDropdown
+                label="To"
+                name="to"
+                options={airports}
+                className="input-style"
+              />
+              <CustomDatePicker name="date" label='Date' />
               <Input
                 inputStyle="input-style "
                 label="Enter Phone number"
@@ -167,4 +218,4 @@ const Product = () => {
     </main>
   );
 };
-export default Product;
+export default Travels;

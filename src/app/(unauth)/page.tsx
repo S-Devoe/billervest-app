@@ -76,6 +76,7 @@ export default function Home() {
             link="#"
             title="Travels ✈️"
             contentArr={travels}
+            linkType="products/travels"
           />
           <CollectionCarousel
             link="#"
@@ -92,8 +93,6 @@ export default function Home() {
           </div>
         </section>
       </Container>
-
-      
     </main>
   );
 }
