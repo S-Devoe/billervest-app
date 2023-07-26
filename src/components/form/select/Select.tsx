@@ -18,9 +18,9 @@ const SelectDropdown: FC<Props> = ({
   name,
   required,
   className,
-  style = "flex flex-col gap-[16px] ",
+  style = "flex flex-col gap-y-[1rem] md:w-fit w-full ",
   label,
-  labelStyle = "font-semibold font-grotesk text-[20px]",
+  labelStyle = "font-semibold font-grotesk  text-base md:text-[1.25rem]",
   ...props
 }) => {
   const {
@@ -52,7 +52,7 @@ const SelectDropdown: FC<Props> = ({
                 },
               }),
             }}
-            className={`Select ${className} `}
+            className={`Select ${className} h-12 md:h-[4.063rem] rounded-md `}
             ref={ref}
             // menuIsOpen
             components={{

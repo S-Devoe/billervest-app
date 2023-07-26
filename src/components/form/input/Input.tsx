@@ -3,7 +3,7 @@
 import { FC, useState } from "react";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
-import { useFormContext } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 interface Props {
   name: string;
@@ -20,10 +20,10 @@ interface Props {
 const Input: FC<Props> = ({
   name,
   label,
-  style = "flex flex-col gap-[16px] ",
+  style = "flex flex-col gap-y-[1rem]",
   inputStyle,
   type = "text",
-  labelStyle = "font-semibold font-grotesk text-[20px]",
+  labelStyle = "font-semibold font-grotesk  text-base md:text-[1.25rem]",
   placeholder,
   rules,
   required,
@@ -33,9 +33,7 @@ const Input: FC<Props> = ({
   const {
     register,
     formState: { errors },
-  } = useFormContext();
-
- 
+  } = useForm();
 
   return (
     <div className={style}>
@@ -54,16 +52,16 @@ const Input: FC<Props> = ({
               })}
               type={type}
               placeholder={placeholder}
-              className={` ${inputStyle} border-[1.75px] rounded-[6px] p-2 h-[60px] border-grey-text  `}
+              className={` ${inputStyle} border-[1.75px] rounded-md p-2  h-12 md:h-[4.063rem] border-white  `}
             />
             {errors[name] && (
-              <p className="text-yellow text-[15px] mt-3 ">{`${errors[name]?.message}`}</p>
+              <p className="text-yellow text-[0.938rem] mt-3 ">{`${errors[name]?.message}`}</p>
             )}
           </div>
         ) : (
           <>
             <div
-              className={`${inputStyle} flex items-center gap-3 focus-within:border-[1.8px] border-[1.75px] rounded-[6px] p-2 h-[60px] border-white`}
+              className={`${inputStyle} flex items-center gap-3 focus-within:border-[1.8px] border-[1.75px] rounded-md p-2  h-12 md:h-[4.063rem] border-white`}
             >
               <input
                 {...register(name, {

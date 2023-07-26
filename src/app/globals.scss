@@ -14,10 +14,6 @@ body,
   box-sizing: border-box;
 }
 
-* {
-  font-family: "Poppins", sans-serif;
-}
-
 html,
 body {
   min-height: 100%;
@@ -82,6 +78,7 @@ main {
 
 html {
   font-family: var(--font-poppins);
+  font-size: 82.5%;
 }
 
 input {
@@ -109,14 +106,9 @@ li {
   list-style-type: none;
 }
 
-.font-grotesk {
-  font-family: var(--font-space-grotesk);
-  font-size: 1rem;
-}
-
 .carousel-btn {
-  height: 70px;
-  width: 70px;
+  height: 5rem;
+  width: 5rem;
   border-radius: 999px;
   border: 1px solid #808080;
   display: flex;
@@ -221,26 +213,23 @@ li {
   background: white;
 }
 
-.react-datepicker__current-month, 
-.react-datepicker__day-name, .react-datepicker__day {
+.react-datepicker__current-month,
+.react-datepicker__day-name,
+.react-datepicker__day {
   font-family: var(--font-space-grotesk) !important;
   font-size: 1rem;
 }
 
-
-.react-datepicker__current-month{
+.react-datepicker__current-month {
   font-size: 1.15rem !important;
 }
 
-.react-datepicker__day--selected{
-  background: #808080  !important ;
+.react-datepicker__day--selected {
+  background: #808080 !important ;
 }
-
 
 .Select {
   border: 1.75px solid #808080;
-  border-radius: 6px;
-  height: 60px;
   background: transparent;
   font-size: 1rem;
 
@@ -280,6 +269,13 @@ li {
       background-color: #808080;
     }
   }
+}
+
+.multiline_truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @layer components {

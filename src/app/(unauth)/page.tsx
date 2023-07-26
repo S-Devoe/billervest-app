@@ -24,28 +24,28 @@ export default function Home() {
   return (
     <main className="">
       <Container>
-        <section className="flex flex-col md:flex-row items-center justify-between mt-[20px] ">
-          <div className=" flex flex-col gap-4 md:gap-0 items-center md:items-start flex-1 ">
-            <p className="text-[16px] tracking-[13%] text-center md:text-start leading-[25.6px] text-yellow font-[700] ">
+        <section className="flex flex-col md:flex-row items-center justify-between  md:gap-x-6 pt-10 md:pt-0">
+          <div className=" flex flex-col gap-y-4 md:gap-y-5 md:gap-0 items-center md:items-start flex-1  ">
+            <p className="text-left text-sm w-full md:w-fit tracking-[0.13rem]  md:text-start md:leading-[25.6px] text-yellow font-[700] ">
               EMBRACE CRYPTO, FACILITATE PAYMENTS
             </p>
-            <h1 className="font-semibold text-center md:text-start text-[50px] md:text-[78px] !font-grotesk leading-[60px] md:leading-[81px]  ">
+            <h1 className="font-semibold  text-start text-3xl md:text-[4.875rem] font-grotesk  md:leading-[5.063rem]  ">
               Pay in the most popular crypto currencies.
             </h1>
             <p
-              className="mt-4 md:mt-8 text-center md:text-start md:border-l-[8px] max-w-[500px] pl-[34px] font-normal border-l-white text-[18px] md:text-[23px]
-           text-[#f5f2eaa4]  "
+              className="md:mt-8 text-start md:border-l-[8px] md:max-w-[31.125rem] md:pl-8 font-normal border-l-white text-sm md:text-[1.2rem]
+           text-[#F5F2EA]  text-opacity-60 md:leading-[2.188rem]"
             >
               Giftcards, Travels, Phone, gaming, Food Groceries, Gifts, Health &
               Beauty bills paid with crypto.
             </p>
-            <div className="flex justify-center md:justify-start items-center gap-[70px] md:mt-[50px]  ">
+            <div className="flex justify-start items-center md:gap-[70px] md:mt-[50px]  w-full md:w-fit gap-x-8">
               {ctaNumber.map((item) => (
                 <div className="" key={item.id}>
-                  <span className=" font-bold text-[14px] md:text-[16px] text-yellow mb-[50px] ">
+                  <span className=" font-bold text-xs md:text-sm text-yellow mb-12 ">
                     {item.head}
                   </span>
-                  <div className="font-bold font-grotesk text-[50px] md:text-[65px] flex items-center ">
+                  <div className="font-bold font-grotesk text-2xl md:text-[3.5rem] md:leading-[4.5rem] flex items-center ">
                     <CountAnimation num={item.content} />
                     <span>+</span>
                   </div>
@@ -53,14 +53,14 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="flex-1 md:mt-0 mt-10 flex justify-end md:h-full md:w-full ">
-            <Image src={HomePng} alt="img" priority />
+          <div className=" md:mt-0 mt-10 flex justify-end  ">
+            <Image src={HomePng} alt="img" priority height={500} width={500} />
           </div>
         </section>
       </Container>
       <ChooseBillerPay />
       <Container>
-        <section className="mt-8 md:mt-[180px] carosel w-full flex flex-col gap-[40px] lg:gap-[80px] ">
+        <section className="mt-8 md:mt-28  w-full flex flex-col gap-y-10 lg:gap-y-[7rem] ">
           <CollectionCarousel
             link="#"
             title="Top your mobile ASAP ⚡"
@@ -82,15 +82,9 @@ export default function Home() {
             link="#"
             title="Gaming Cards 🎮"
             contentArr={games}
+            linkType="products/gaming"
           />
           <Collections content={services} title="Other Services 🎊" />
-          <div className=" flex justify-start  md:mt-[20px] ">
-            <Button
-              btnTitle="Load More"
-              borderRadius="rounded-[8px] md:rounded-[50px]"
-              width="w-full md:w-[200px]"
-            />
-          </div>
         </section>
       </Container>
     </main>

@@ -7,6 +7,8 @@ interface Props {
 }
 
 const Container: FC<Props> = ({ children }) => {
-  return <section className="max-width w-full">{children}</section>;
+  return (
+    <section className="w-[90%] md:w-[85%] mx-auto h-full ">{children}</section>
+  );
 };
 export default Container;

@@ -30,15 +30,26 @@ import TOS from "@/assets/images/support/tos.png";
 import Privacy from "@/assets/images/support/policy.png";
 import BillerPay from "@/assets/images/support/BillerPay.png";
 
-// services 
-import Uber from '@/assets/images/collections/uber.png'
-import Hulu from '@/assets/images/collections/hulu.png'
-import Twitch from '@/assets/images/collections/twitch.png'
-import Dstv from '@/assets/images/collections/dstv.png'
-import Gotv from '@/assets/images/collections/gotv.png'
-import Skype from '@/assets/images/collections/skype.png'
-import Ie from '@/assets/images/collections/ie.png'
-import Spectranet from '@/assets/images/collections/spectranet.png'
+// services
+import Uber from "@/assets/images/collections/uber.png";
+import Hulu from "@/assets/images/collections/hulu.png";
+import Twitch from "@/assets/images/collections/twitch.png";
+import Dstv from "@/assets/images/collections/dstv.png";
+import Gotv from "@/assets/images/collections/gotv.png";
+import Skype from "@/assets/images/collections/skype.png";
+import Ie from "@/assets/images/collections/ie.png";
+import Spectranet from "@/assets/images/collections/spectranet.png";
+
+// business companies
+import Gucci from "@/assets/images/business-companies/gucci.png";
+import Subway from "@/assets/images/business-companies/subway.png";
+import PizzaHut from "@/assets/images/business-companies/pizzahut.png";
+import N from "@/assets/images/business-companies/n.png";
+import PaymentIcon from "@/components/icons/PaymentIcon";
+import StatusUpIcon from "@/components/icons/StatusUpIcon";
+import OnboardingIcon from "@/components/icons/OnboardingIcon";
+import { ShieldIcon } from "@/components/icons/ShieldIcon";
+import WalletIcon from "@/components/icons/WalletIcon";
 
 export const supportList: FooterListI[] = [
   {
@@ -196,34 +207,42 @@ export const games = [
   {
     id: 1,
     image: Pubg,
+    header: "Enjoy PUBG Without Stress",
   },
   {
     id: 2,
     image: Freefire,
+    header: "Enjoy FreeFire Without Stress",
   },
   {
     id: 3,
     image: Xbox,
+    header: "Enjoy XBOX Without Stress",
   },
   {
     id: 4,
     image: Nitendo,
+    header: "Enjoy Nintendo Without Stress",
   },
   {
     id: 5,
     image: Pubg,
+    header: "Enjoy PUBG Without Stress",
   },
   {
     id: 6,
     image: Freefire,
+    header: "Enjoy FreeFire Without Stress",
   },
   {
     id: 7,
     image: Xbox,
+    header: "Enjoy XBOX Without Stress",
   },
   {
     id: 8,
     image: Nitendo,
+    header: "Enjoy Nintendo Without Stress",
   },
 ];
 
@@ -271,7 +290,7 @@ export const phone = [
   {
     id: 9,
     image: Airtel,
-    header: 'Top up your Airtel line'
+    header: "Top up your Airtel line",
   },
 ];
 
@@ -370,5 +389,129 @@ export const services = [
   {
     id: 16,
     image: Dstv,
+  },
+];
+
+export const businessCompanies = [
+  {
+    id: 1,
+    image: Gucci,
+  },
+  {
+    id: 2,
+    image: PizzaHut,
+  },
+  {
+    id: 3,
+    image: N,
+  },
+  {
+    id: 4,
+    image: Subway,
+  },
+];
+
+export const businessServices = [
+  {
+    id: 1,
+    title: "Online payments",
+    body: "Enabling secure and convenient transactions, allowing customers to make purchases from anywhere with supported payment methods.",
+    path: "/business/online_payments",
+    icon: PaymentIcon,
+  },
+  {
+    id: 2,
+    title: "In-app payments",
+    body: "Pay for digital goods, services, or subscriptions seamlessly within the app environment. Enjoy our gateway platforms and systems.",
+    path: "/business/inperson_payments",
+    icon: PaymentIcon,
+  },
+  {
+    id: 3,
+    title: "Business Management",
+    body: "Plan, organize, direct and control the resources and activities of a company to achieve its goals and objectives efficiently and effectively.",
+    path: "/business/business_management",
+    icon: StatusUpIcon,
+  },
+];
+
+export const whyBillerPay = [
+  {
+    id: 1,
+    title: "Easy Onboarding",
+    body: "Set up your account with our smooth process",
+    path: "/business",
+    icon: OnboardingIcon,
+  },
+  {
+    id: 2,
+    title: "Volatility Shield",
+    body: "Less effect of unstable crypto prices.",
+    path: "/business",
+    icon: ShieldIcon,
+  },
+  {
+    id: 3,
+    title: "Fast Payments",
+    body: "Get paid at as fast as possible.",
+    path: "/business",
+    icon: WalletIcon,
+  },
+];
+
+export const onlinePaymentsData = [
+  {
+    id: 1,
+    title: "Pluggins",
+    body: "A ready to use checkout page optimized for customer conversion. ",
+    path: "#",
+  },
+  {
+    id: 2,
+    title: "Payment Links",
+    body: "A ready to use checkout page optimized for customer conversion. ",
+    path: "#",
+  },
+  {
+    id: 3,
+    title: "Checkout",
+    body: "A ready to use checkout page optimized for customer conversion. ",
+    path: "#",
+  },
+];
+
+export const inpersonPaymentData = [
+  {
+    id: 1,
+    title: "One QR",
+    path: "#",
+  },
+  {
+    id: 2,
+    title: "Dynamic QR",
+    path: "#",
+  },
+  {
+    id: 3,
+    title: "Point Of Sale (POS)",
+    path: "#",
+  },
+];
+
+export const businessManagementData = [
+  {
+    id: 1,
+    title: "Balance And Transactions",
+    path: "#",
+  },
+  {
+    id: 2,
+    title: "Payment & Payout",
+    path: "#",
+  },
+  {
+    id: 3,
+    title: "Refund",
+    path: "#",
   },
 ];

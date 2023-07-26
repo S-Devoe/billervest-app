@@ -3,9 +3,9 @@ import "./globals.scss";
 import { Poppins, Space_Grotesk } from "next/font/google";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import "react-datepicker/dist/react-datepicker.css";
 import Head from "next/head";
-
 
 // const inter = Inter({ subsets: ["latin"] });
 
