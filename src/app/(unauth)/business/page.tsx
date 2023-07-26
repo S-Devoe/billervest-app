@@ -24,7 +24,7 @@ export default function BusinessHome() {
       <Container>
         <section className="flex flex-col md:flex-row items-center justify-between mt-6 md:gap-y-6 ">
           <div className=" flex flex-col gap-y-5 md:gap-0 items-center md:items-start flex-1  ">
-            <p className="text-left text-sm w-full md:w-fit tracking-[0.13rem]  md:text-start md:leading-[25.6px] text-yellow font-[700] ">
+            <p className="text-left text-sm md:text-base w-full md:w-fit tracking-[0.13rem]  md:text-start md:leading-[25.6px] text-yellow font-[700] ">
               EMBRACE CRYPTO, FACILITATE PAYMENTS
             </p>
             <h1 className="font-semibold  text-start text-3xl md:text-[4.875rem] font-grotesk  md:leading-[5.063rem]">
