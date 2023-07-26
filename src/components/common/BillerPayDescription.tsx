@@ -23,7 +23,7 @@ export const BillerPayDescription = () => {
             <h5 className="mb-3 font-semibold ">About Us</h5>
             <div className="">
               <p className="text-[#F5F2EA]  text-opacity-60">
-                At Biller Pay, we're passionate about bringing modern,
+                At Biller Pay, we&apos;re passionate about bringing modern,
                 innovative solutions to the payments industry. Our team of
                 experienced professionals combines expertise in both the
                 payments and cryptocurrency spaces to create a powerful platform
@@ -56,7 +56,7 @@ export const BillerPayDescription = () => {
                 and shareholders by delivering innovative solutions that meet
                 the needs of a rapidly-evolving payments landscape. <br /> With
                 a focus on security, simplicity, and customer satisfaction,
-                we're committed to making{" "}
+                we&copy;re committed to making{" "}
                 <span className="font-bold">
                   Biller Pay the go-to platform for bill payments powered by
                   cryptocurrency.
