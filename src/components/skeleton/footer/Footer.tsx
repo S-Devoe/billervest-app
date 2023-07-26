@@ -8,56 +8,59 @@ import TwitterIcon from "@/components/icons/TwitterIcon";
 import FacebookIcon from "@/components/icons/FacebookIcon";
 import TelegramIcon from "@/components/icons/TelegramIcon";
 import YoutubeIcon from "@/components/icons/YoutubeIcon";
+import Container from "../container/Container";
 
 const Footer = () => {
   const date = new Date();
 
   return (
-    <footer className="w-full bg-[#1A1A1A] p-8 md:p-[50px]  ">
-      <div className="flex gap-14 md:gap-4 flex-col md:flex-row justify-between items-center lg:items-start">
-        <div className="mt-4 md:mt-0 order-3 md:order-1 flex flex-col items-center md:items-start ">
-          <div className="h-[45px] w-[180px] md:w-[200px] relative object-contain  ">
-            <Image src={Logo} alt="logo" priority fill sizes="100%" />
+    <footer className="w-full bg-[#1A1A1A] py-8 md:py-16   ">
+      <Container>
+        <div className="flex gap-y-10 md:gap-4 justify-start flex-col md:flex-row md:justify-between  items-start">
+          <div className="mt-4 md:mt-0 order-3 md:order-1 flex flex-col items-start  ">
+            <div className="h-[2.8rem] w-[11rem] md:w-[12rem] relative object-contain  ">
+              <Image src={Logo} alt="logo" priority sizes="100%" />
+            </div>
+            <p className="text-base text-left mt-[1.563rem] md:mt-[3.125rem] ">
+              Copyright {date.getFullYear()} BillerPay{" "}
+              <span className="md:block">@ All right reserved</span>{" "}
+            </p>
+            <div className="flex items-center gap-4 mt-[50px] ">
+              {socials.map((item) => (
+                <div
+                  className="h-[3.75rem] w-[4.063rem] rounded-[0.86rem] bg-[#ffffff2a] flex items-center justify-center "
+                  key={item.name}
+                  title={item.name}
+                >
+                  {item.icon}
+                </div>
+              ))}
+            </div>
           </div>
-          <p className="text-[20px] mt-[25px] md:mt-[50px] ">
-            Copyright {date.getFullYear()} BillerPay{" "}
-            <span className="block">@ All right reserved</span>{" "}
-          </p>
-          <div className="flex items-center gap-4 mt-[50px] ">
-            {socials.map((item) => (
-              <div
-                className="h-[60px] w-[65px] rounded-[0.86rem] bg-[#ffffff2a] flex items-center justify-center "
-                key={item.name}
-                title={item.name}
-              >
-                {item.icon}
-              </div>
-            ))}
-          </div>
-        </div>
 
-        <div className=" order-1  flex flex-col items-center md:items-start ">
-          <p className="font-grotesk text-[25px] ">Company</p>
-          <div className="mt-[20px] md:mt-[40px] flex flex-col text-center md:text-start gap-[15px]  ">
-            {company.map((item) => (
-              <div className="text-[18px]  " key={item.id}>
-                {item.title}
-              </div>
-            ))}
+          <div className=" md:order-1  w-full md:w-fit flex flex-col items-start ">
+            <p className="font-grotesk text-2xl ">Company</p>
+            <div className="mt-[1.25rem] md:mt-[2.5rem] flex flex-col text-start gap-4  ">
+              {company.map((item) => (
+                <div className="text-base md:text-lg font-light " key={item.id}>
+                  {item.title}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className=" order-2 md:order-1 flex flex-col items-center md:items-start ">
-          <p className="font-grotesk text-[25px] ">Privacy</p>
-          <div className="mt-[20px] md:mt-[40px] text-center md:text-start  flex flex-col gap-[15px] ">
-            {privacy.map((item) => (
-              <div className=" text-[18px]  " key={item.id}>
-                {item.title}
-              </div>
-            ))}
+          <div className=" order-2 md:order-1 w-full md:w-fit flex flex-col items-start ">
+            <p className="font-grotesk font-semibold text-2xl ">Privacy</p>
+            <div className="mt-[1.25rem] md:mt-[2.5rem] text-start  flex flex-col gap-[15px] ">
+              {privacy.map((item) => (
+                <div className=" text-base md:text-lg font-light" key={item.id}>
+                  {item.title}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

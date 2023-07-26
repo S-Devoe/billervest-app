@@ -19,3 +19,7 @@ export interface FaqI {
   title: string;
   content: string;
 }
+
+export interface IconI {
+  scale?: number;
+}

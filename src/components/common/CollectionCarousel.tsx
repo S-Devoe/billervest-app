@@ -78,14 +78,16 @@ const CollectionCarousel: FC<Props> = ({
     },
   };
 
+  // if (true) return null;
+
   return (
-    <div className="carousel-collection">
+    <div className=" w-full ">
       <div className="flex justify-between items-center ">
-        <h4 className=" font-semibold text-[26px] lg:text-[40px] font-grotesk  ">
+        <h4 className=" font-semibold text-2xl lg:text-4xl font-grotesk  ">
           {title}
         </h4>
-        <div className="flex items-center gap-5 ">
-          <Link href={link} className="text-[18px] lg:text-[23px]  ">
+        <div className="flex items-center gap-x-5 ">
+          <Link href={link} className="text-base lg:text-[1.3rem]  ">
             See more
           </Link>
           <div className=" hidden lg:flex items-center gap-5">
@@ -94,24 +96,24 @@ const CollectionCarousel: FC<Props> = ({
               onClick={handlePrev}
               disabled={startState}
             >
-              <ArrowLeft />
+              <ArrowLeft height={20} width={20} />
             </button>
             <button
               className="carousel-btn"
               onClick={handleNext}
               disabled={endState}
             >
-              <ArrowRight />
+              <ArrowRight height={25} width={25} />
             </button>
           </div>
         </div>
       </div>
-      <div className="mt-[25px] lg:mt-[60px] ">
+      <div className="mt-5 lg:mt-10 w-[90vw] overflow-x-hidden  ">
         <Swiper
           onSlideChange={handleSlideChange}
           modules={[Navigation, Autoplay]}
-          // autoplay={autoplay}
-          cssMode={true}
+          autoplay={autoplay}
+          // cssMode={true}
           breakpoints={breakpoints}
           navigation={{
             nextEl: nextRef.current,
@@ -119,12 +121,13 @@ const CollectionCarousel: FC<Props> = ({
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
+          className=""
         >
           {contentArr.map((item) => (
             <SwiperSlide className="" key={`collection-${item.id}`}>
               <Link
                 href={linkType ? `/${linkType}/${item.id}` : ""}
-                className="rounded-[0.721rem] relative flex items-center justify-center bg-white h-[100px] w-[150px] md:w-[200px] lg:h-[140px]  lg:w-[240px]  "
+                className="rounded-[0.721rem]  flex items-center justify-center bg-white  border-8  border-transparent h-[8.813rem]  hover:border-[#7049F7] transition-colors duration-500 "
               >
                 <Image
                   src={item.image}

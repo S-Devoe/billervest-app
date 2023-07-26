@@ -2,18 +2,19 @@
 import CalendarIcon from "@/components/icons/CalendarIcon";
 import dayjs from "dayjs";
 import advancedFormat from "dayjs/plugin/advancedFormat";
-import { FC, forwardRef, useState } from "react";
+import { FC, forwardRef } from "react";
 import DatePicker from "react-datepicker";
-import { Controller, useFormContext } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 
 dayjs.extend(advancedFormat);
 
 interface DateProps {
   name: string;
   state?: string;
-  required?: booleans;
+  required?: boolean;
   label?: string;
   labelStyle?: string;
+  style?: string;
 }
 
 const CustomDatePicker: FC<DateProps> = ({
@@ -26,8 +27,8 @@ const CustomDatePicker: FC<DateProps> = ({
   // const [startDate, setStartDate] = useState(new Date());
   const {
     control,
-    formstate: { errors },
-  } = useFormContext();
+    formState: { errors },
+  } = useForm<any>();
 
   return (
     <div className={style}>
@@ -66,7 +67,7 @@ const CustomInput = forwardRef<HTMLButtonElement, any>(
         <button
           className="input-style date-button border-[1.75px] rounded-[6px] p-2 h-[60px] border-grey-text  flex items-center justify-between "
           onClick={onClick}
-          button="button"
+          type="button"
           ref={ref}
         >
           <p className="">{dayjs(value).format("Do MMMM, YYYY")}</p>

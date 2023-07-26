@@ -2,6 +2,7 @@
 
 import CollectionCarousel from "@/components/common/CollectionCarousel";
 import Collections from "@/components/common/Collections";
+import { ProductHeader } from "@/components/common/ProductHeader";
 import TransactModal from "@/components/common/TransactModal";
 import TransactWallet from "@/components/common/TransactModal";
 import Button from "@/components/form/Buttons/Button";
@@ -32,22 +33,14 @@ const Product = () => {
 
   return (
     <main>
-      <section className="mt-[35px] md:mt-[50px] flex flex-col items-center  ">
-        <h1 className="text-center font-semibold text-[40px] font-grotesk lg:text-[70px] ">
-          {data.header}
-        </h1>
-        <Image
-          src={data.image}
-          alt="img"
-          className=" h-[150px] max-w-[250px] md:h-[165px] md:max-w-[300px] mt-[20px] md:mt-[50px] "
-        />
+      <section className="my-[2.188rem] md:mt-[50px] flex flex-col items-center  w-full">
+        <ProductHeader header={data.header} image={data.image} />
         <FormProvider {...methods}>
           <form
             className="flex flex-col items-center mt-[50px] w-full "
             onSubmit={methods.handleSubmit(onSubmit)}
           >
-            <div className="flex flex-col items-center gap-8 w-full">
-             
+            <div className="flex flex-col  gap-y-8 w-full md:w-fit ">
               <Input
                 inputStyle="input-style "
                 label="Enter Phone number"
@@ -93,38 +86,37 @@ const Product = () => {
                 required
               />
             </div>
-            <div className="flex items-center gap-4 md:gap-8 mt-[70px] ">
+            <div className="flex justify-between md:justify-start md:flex-row items-center gap-4 md:gap-8 mt-12 w-full md:w-fit">
               <Button
                 btnTitle="Cancel"
                 type="button"
                 bgColor="bg-transparent"
-                borderRadius="rounded-[30px] md:rounded-[40px] "
-                width="w-full md:w-[200px] !px-6 "
-                height="h-[65px] "
+                borderRadius="rounded-full "
+                width="w-[45%] md:w-[200px] px-4 !md:px-6 "
+                height="md:h-[65px] "
                 styles="border-[1px] border-[#7049F7] "
-                textStyle="text-[16px] md:text-[18px] font-bold "
-                // onClick={() => methods.reset()}
+                textStyle="  md:text-lg  font-bold "
                 onClick={() => setOpenCancelModal((prev) => !prev)}
               />
               <Button
                 btnTitle="Confirm"
                 type="submit"
-                borderRadius="rounded-[30px] md:rounded-[40px] "
-                width="w-full md:w-[200px] !px-6 "
-                textStyle="text-[16px] md:text-[18px] font-bold "
-                height="h-[65px] "
+                borderRadius="rounded-full "
+                width="w-[45%] md:w-[200px] !px-6 "
+                height="md:h-[65px] "
+                textStyle="  md:text-lg  font-bold "
               />
             </div>
           </form>
         </FormProvider>
       </section>
       <section className=" flex flex-col mt-[30px] md:mt-[100px]  ">
-        <h2 className="text-center font-semibold text-[40px] font-grotesk lg:text-[40px] ">
+        <h2 className="md:text-center font-semibold text-3xl font-grotesk lg:text-[2.5rem] ">
           See our other services
         </h2>
 
         <Container>
-          <div className="my-[40px] flex flex-col gap-10 ">
+          <section className="mt-8 md:mt-28  w-full flex flex-col gap-y-10 lg:gap-y-[7rem]">
             <CollectionCarousel
               link="#"
               title="Travels ✈️"
@@ -135,15 +127,8 @@ const Product = () => {
               title="Gaming Cards 🎮"
               contentArr={games}
             />
-          </div>
-          <Collections content={services} title="Other Services 🎊" />
-          <div className=" flex justify-start mt-8  md:mt-[40px] ">
-            <Button
-              btnTitle="Load More"
-              borderRadius="rounded-[8px] md:rounded-[50px]"
-              width="w-full md:w-[200px]"
-            />
-          </div>
+            <Collections content={services} title="Other Services 🎊" />
+          </section>
         </Container>
       </section>
       <TransactModal
