@@ -1,5 +1,6 @@
 "use client";
 import Logo from "@/assets/images/BP-Logo.png";
+import { useCallback, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../form/Buttons/Button";
@@ -7,10 +8,16 @@ import { useRouter, usePathname } from "next/navigation";
 import { IoMenu, IoClose } from "react-icons/io5";
 import Container from "../skeleton/container/Container";
 import { NavbarDropDown } from "./NavbarDropDown";
+import { MobileNavbar } from "./MobileNavbar";
 
 const UnAuthNavbar = () => {
   const router = useRouter();
   const pathname = usePathname();
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
+
+  const toggleMobileNav = useCallback(() => {
+    setIsMobileNavVisible((prev) => !prev);
+  }, []);
 
   return (
     <div className="w-full mb-6">
@@ -138,11 +145,15 @@ const UnAuthNavbar = () => {
               <Image src={Logo} alt="logo" fill sizes="100%" />
             </Link>
 
-            <button className="">
+            <button className="" onClick={toggleMobileNav}>
               <IoMenu color="#fff" size={26} />
             </button>
           </div>
         </nav>
+        <MobileNavbar
+          toggleMobileNav={toggleMobileNav}
+          isMobileNavVisible={isMobileNavVisible}
+        />
       </Container>
     </div>
   );

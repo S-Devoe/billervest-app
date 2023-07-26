@@ -9,6 +9,7 @@ import { ecommerce, games, phone, services, travels } from "@/constants/data";
 import Container from "@/components/skeleton/container/Container";
 import ChooseBillerPay from "@/components/common/ChooseBillerPay";
 import CollectionCarousel from "@/components/common/CollectionCarousel";
+import { BillerPayDescription } from "@/components/common/BillerPayDescription";
 
 function CountAnimation({ num }: { num: number }) {
   const { x } = useSpring({
@@ -87,6 +88,7 @@ export default function Home() {
           <Collections content={services} title="Other Services 🎊" />
         </section>
       </Container>
+      <BillerPayDescription />
     </main>
   );
 }

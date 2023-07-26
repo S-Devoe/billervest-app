@@ -6,6 +6,7 @@ import Container from "@/components/skeleton/container/Container";
 import { CompaniesAcceptingCrypto } from "@/components/common/CompaniesAcceptingCrypto";
 import { BusinessServices } from "@/components/common/BusinessServices";
 import { HowToUseBillerPay } from "@/components/common/HowToUseBillerPay";
+import { BillerPayDescription } from "@/components/common/BillerPayDescription";
 
 function CountAnimation({ num }: { num: number }) {
   const { x } = useSpring({
@@ -59,6 +60,7 @@ export default function BusinessHome() {
         <CompaniesAcceptingCrypto />
         <BusinessServices />
         <HowToUseBillerPay />
+        <BillerPayDescription />
       </div>
     </main>
   );
