@@ -251,46 +251,55 @@ export const phone = [
     id: 1,
     image: Mtn,
     header: "Top up your MTN line",
+    title: "MTN",
   },
   {
     id: 2,
     image: Airtel,
     header: "Top up your Airtel line",
+    title: "Airtel",
   },
   {
     id: 3,
     image: Glo,
     header: "Top up your Glo line",
+    title: "Glo",
   },
   {
     id: 4,
     image: Etisalat,
     header: "Top up your 9mobile line",
+    title: "Etisalat",
   },
   {
     id: 5,
     image: Mtn,
     header: "Top up your MTN line",
+    title: "MTN",
   },
   {
     id: 6,
     image: Airtel,
     header: "Top up your Airtel line",
+    title: "Airtel",
   },
   {
     id: 7,
     image: Etisalat,
     header: "Top up your 9mobile  line",
+    title: "Etisalat",
   },
   {
     id: 8,
     image: Mtn,
     header: "Top up your MTN line",
+    title: "MTN",
   },
   {
     id: 9,
     image: Airtel,
     header: "Top up your Airtel line",
+    title: "Airtel",
   },
 ];
 

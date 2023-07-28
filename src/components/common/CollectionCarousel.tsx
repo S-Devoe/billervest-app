@@ -13,6 +13,7 @@ interface Props {
   contentArr: Array<{ id: number; image: StaticImageData; header?: string }>;
   link: string;
   linkType?: string;
+  id?: string;
 }
 
 const CollectionCarousel: FC<Props> = ({
@@ -20,6 +21,7 @@ const CollectionCarousel: FC<Props> = ({
   contentArr,
   link,
   linkType,
+  id,
 }) => {
   const swiperRef = useRef<SwiperCore>();
   const nextRef = useRef<any>(null);
@@ -81,7 +83,7 @@ const CollectionCarousel: FC<Props> = ({
   // if (true) return null;
 
   return (
-    <div className=" w-full ">
+    <div className=" w-full" id={id}>
       <div className="flex justify-between items-center ">
         <h4 className=" font-semibold text-2xl lg:text-4xl font-grotesk  ">
           {title}

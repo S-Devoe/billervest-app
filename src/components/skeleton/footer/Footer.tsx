@@ -119,7 +119,7 @@ const socials = {
   mail: {
     name: "Mail",
     icon: IoMdMail,
-    address: " Billerpayafrica@gmail.com",
+    address: "Billerpayafrica@gmail.com",
   },
 };
 

@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/images/BP-Logo.png";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { usePathname } from "next/navigation";
+import { phone } from "@/constants/data";
+import { NavbarDropDown } from "../NavbarDropDown";
 
 type MobileNavbarProps = {
   toggleMobileNav(): void;
@@ -90,6 +92,9 @@ export const MobileNavbar = ({
                   id: 1,
                   path: "#",
                   title: "Top Up",
+                  name: "top-up",
+                  hasDropDown: true,
+                  dropDown: phone,
                 },
                 {
                   id: 2,
@@ -103,7 +108,7 @@ export const MobileNavbar = ({
                 },
                 {
                   id: 4,
-                  path: "#",
+                  path: "https://www.jumia.com.ng/",
                   title: "E-Commerce",
                 },
                 {
@@ -176,7 +181,14 @@ export const MobileNavbar = ({
 
 type MobileNavDropDownProps = {
   title: string;
-  data: { id: number; title: string; path: string }[];
+  data: {
+    id: number;
+    title: string;
+    path: string;
+    name?: string;
+    hasDropDown?: boolean;
+    dropDown?: { id: number; header: string; title: string }[];
+  }[];
   toggleMobileNav(): void;
 };
 
@@ -202,17 +214,19 @@ function MobileNavDropDown({
       </button>
       {isActive && (
         <ul className="flex flex-col gap-y-3 text-sm pl-2">
-          {data.map((item) => (
-            <li key={item.id}>
-              <Link
-                href={item.path}
-                className="text-gray-400  font-semibold hover:text-[#7049F7]"
-                onClick={toggleMobileNav}
-              >
-                {item.title}
-              </Link>
-            </li>
-          ))}
+          {data.map((item) => {
+            return (
+              <li key={item.id}>
+                <Link
+                  href={item.path}
+                  className="text-gray-400  font-semibold hover:text-[#7049F7]"
+                  onClick={toggleMobileNav}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       )}
     </li>

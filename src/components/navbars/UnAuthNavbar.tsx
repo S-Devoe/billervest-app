@@ -58,7 +58,7 @@ const UnAuthNavbar = () => {
                   lists={[
                     {
                       id: 1,
-                      path: "#",
+                      path: "#top-up",
                       title: "Top Up",
                     },
                     {
@@ -73,7 +73,7 @@ const UnAuthNavbar = () => {
                     },
                     {
                       id: 4,
-                      path: "#",
+                      path: "https://www.jumia.com.ng/",
                       title: "E-Commerce",
                     },
                     {
