@@ -1,0 +1,19 @@
+.group li > ul {
+  transform: translatex(100%) scale(0);
+}
+.group li:hover > ul {
+  transform: translatex(101%) scale(1);
+}
+.group li > button svg {
+  transform: rotate(-90deg);
+}
+.group li:hover > button svg {
+  transform: rotate(-270deg);
+}
+
+/* .dropdown:hover .group-hover\:scale-100 {
+  transform: scale(1);
+}
+.dropdown:hover .group-hover\:-rotate-180 {
+  transform: rotate(180deg);
+} */

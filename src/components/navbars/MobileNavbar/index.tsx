@@ -5,8 +5,7 @@ import Link from "next/link";
 import Logo from "@/assets/images/BP-Logo.png";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { usePathname } from "next/navigation";
-import { phone } from "@/constants/data";
-import { NavbarDropDown } from "../NavbarDropDown";
+import { games, phone, travels } from "@/constants/data";
 
 type MobileNavbarProps = {
   toggleMobileNav(): void;
@@ -93,18 +92,21 @@ export const MobileNavbar = ({
                   path: "#",
                   title: "Top Up",
                   name: "top-up",
-                  hasDropDown: true,
-                  dropDown: phone,
+                  nested_dropdown: phone.slice(0, 4),
                 },
                 {
                   id: 2,
                   path: "#",
                   title: "Travel",
+                  name: "travels",
+                  nested_dropdown: travels.slice(0, 4),
                 },
                 {
                   id: 3,
                   path: "#",
                   title: "Gaming",
+                  name: "gaming",
+                  nested_dropdown: games.slice(0, 4),
                 },
                 {
                   id: 4,
@@ -186,8 +188,7 @@ type MobileNavDropDownProps = {
     title: string;
     path: string;
     name?: string;
-    hasDropDown?: boolean;
-    dropDown?: { id: number; header: string; title: string }[];
+    nested_dropdown?: { id: number; title: string }[];
   }[];
   toggleMobileNav(): void;
 };
@@ -198,6 +199,13 @@ function MobileNavDropDown({
   toggleMobileNav,
 }: MobileNavDropDownProps) {
   const [isActive, setIsActive] = useState(false);
+
+  const [activeNestedDropDown, setActiveNestedDropDown] = useState("");
+
+  const handleNestedDropDownToggle = (name: string) => {
+    if (activeNestedDropDown === name) setActiveNestedDropDown("");
+    else setActiveNestedDropDown(name);
+  };
 
   return (
     <li className="p-4">
@@ -213,17 +221,47 @@ function MobileNavDropDown({
         </span>
       </button>
       {isActive && (
-        <ul className="flex flex-col gap-y-3 text-sm pl-2">
+        <ul className="flex flex-col gap-y-5 text-sm pl-2">
           {data.map((item) => {
+            if (!item.nested_dropdown) {
+              return (
+                <li key={item.id}>
+                  <Link
+                    href={item.path}
+                    className="text-gray-400  font-semibold hover:text-[#7049F7]"
+                    onClick={toggleMobileNav}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            }
+
             return (
-              <li key={item.id}>
-                <Link
-                  href={item.path}
-                  className="text-gray-400  font-semibold hover:text-[#7049F7]"
-                  onClick={toggleMobileNav}
+              <li key={item.id} className="flex flex-col">
+                <button
+                  className="flex text-gray-400  font-semibold hover:text-[#7049F7] items-center gap-x-2 capitalize mb-3"
+                  onClick={() => handleNestedDropDownToggle(item.name!)}
                 >
-                  {item.title}
-                </Link>
+                  <span>{item.title}</span>
+                  <span>
+                    <RiArrowDownSLine className="text-lg" />
+                  </span>
+                </button>
+                {activeNestedDropDown === item.name && (
+                  <ul className="flex flex-col gap-y-3">
+                    {item.nested_dropdown.map((i) => (
+                      <li>
+                        <Link
+                          className="text-gray-400 text-sm font-semibold hover:text-[#7049F7]"
+                          href={`/products/${item.name}/${i.id}`}
+                        >
+                          {i.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             );
           })}

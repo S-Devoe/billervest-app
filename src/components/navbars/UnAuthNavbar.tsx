@@ -7,8 +7,9 @@ import Button from "../form/Buttons/Button";
 import { useRouter, usePathname } from "next/navigation";
 import { IoMenu, IoClose } from "react-icons/io5";
 import Container from "../skeleton/container/Container";
-import { NavbarDropDown } from "./NavbarDropDown";
 import { MobileNavbar } from "./MobileNavbar";
+import { MultiLevelDropdown } from "./MultiLevelDropDown";
+import { games, phone, travels } from "@/constants/data";
 
 const UnAuthNavbar = () => {
   const router = useRouter();
@@ -51,25 +52,31 @@ const UnAuthNavbar = () => {
             </div>
           </div>
           <div className="">
-            <ul className="flex items-center gap-x-[3.5rem]   text-base font-[700]  ">
+            <ul className="flex items-center gap-x-[3.5rem]   text-base font-semibold  ">
               <li>
-                <NavbarDropDown
+                <MultiLevelDropdown
                   title="Products"
-                  lists={[
+                  data={[
                     {
                       id: 1,
-                      path: "#top-up",
+                      path: "#",
                       title: "Top Up",
+                      name: "top-up",
+                      nested_dropdown: phone.slice(0, 4),
                     },
                     {
                       id: 2,
                       path: "#",
                       title: "Travel",
+                      name: "travels",
+                      nested_dropdown: travels.slice(0, 4),
                     },
                     {
                       id: 3,
                       path: "#",
                       title: "Gaming",
+                      name: "gaming",
+                      nested_dropdown: games.slice(0, 4),
                     },
                     {
                       id: 4,
@@ -84,10 +91,11 @@ const UnAuthNavbar = () => {
                   ]}
                 />
               </li>
+
               <li>
-                <NavbarDropDown
+                <MultiLevelDropdown
                   title="Company"
-                  lists={[
+                  data={[
                     {
                       id: 1,
                       path: "#",

@@ -153,34 +153,42 @@ export const travels = [
   {
     id: 1,
     image: Arik,
+    title: "Arik",
   },
   {
     id: 2,
     image: AirPeace,
+    title: "Air Peace",
   },
   {
     id: 3,
     image: Ibom,
+    title: "Ibom",
   },
   {
     id: 4,
     image: Aero,
+    title: "Aero",
   },
   {
     id: 5,
     image: Arik,
+    title: "Arik",
   },
   {
     id: 6,
     image: AirPeace,
+    title: "Air Peace",
   },
   {
     id: 7,
     image: Ibom,
+    title: "Ibom",
   },
   {
     id: 8,
     image: Aero,
+    title: "Aero",
   },
 ];
 
@@ -208,41 +216,49 @@ export const games = [
     id: 1,
     image: Pubg,
     header: "Enjoy PUBG Without Stress",
+    title: "PUBG",
   },
   {
     id: 2,
     image: Freefire,
     header: "Enjoy FreeFire Without Stress",
+    title: "Free Fire",
   },
   {
     id: 3,
     image: Xbox,
     header: "Enjoy XBOX Without Stress",
+    title: "XBOX",
   },
   {
     id: 4,
     image: Nitendo,
     header: "Enjoy Nintendo Without Stress",
+    title: "Nintendo",
   },
   {
     id: 5,
     image: Pubg,
     header: "Enjoy PUBG Without Stress",
+    title: "PUBG",
   },
   {
     id: 6,
     image: Freefire,
     header: "Enjoy FreeFire Without Stress",
+    title: "Free Fire",
   },
   {
     id: 7,
     image: Xbox,
     header: "Enjoy XBOX Without Stress",
+    title: "XBOX",
   },
   {
     id: 8,
     image: Nitendo,
     header: "Enjoy Nintendo Without Stress",
+    title: "Nintendo",
   },
 ];
 
